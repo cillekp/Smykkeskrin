@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Smykkeskrin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcb72ed76bc55d83c3833e55e7670795c4b3b3b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Smykkeskrin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Smykkeskrin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
