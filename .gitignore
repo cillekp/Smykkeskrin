@@ -1,0 +1,33 @@
+[Bb]in/
+[Oo]bj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# --- Visual Studio specifikke regler ---
+.vs/
+[Dd]ebug/
+[Rr]elease/
+*.userprefs
+*.pidb
+*.caps
+*.vshost.exe
+*.vshost.exe.manifest
+*.manifest
+*.gcno
+
+# --- Rider specifikke regler ---
+.idea/
+.idea/.idea.*/
+cmake-build-*/
+/shelf/
+/workspace.xml
+/httpRequests/
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+*.iml
+/queries/
+/dataSources/
+/dataSources.local.xml
