@@ -6,4 +6,13 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Update="Repo\UserRepository.cs">
+        <DependentUpon>IUserRepository.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Repo\IJewleryRepository.cs">
+        <DependentUpon>JewleryRepository.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>
