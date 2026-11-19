@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   smykke-db:
-    image: ://microsoft.com
+    image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: SmykkeSkrinDB
     environment:
       - ACCEPT_EULA=Y
