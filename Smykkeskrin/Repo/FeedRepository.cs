@@ -1,4 +1,6 @@
-﻿using Smykkeskrin.Model;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Smykkeskrin.Model;
 
 namespace Smykkeskrin.Repo
 {

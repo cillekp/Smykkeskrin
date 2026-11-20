@@ -1,4 +1,5 @@
-﻿using Smykkeskrin.Model;
+﻿using System.Collections.Generic;
+using Smykkeskrin.Model;
 
 public interface IFeedRepository
 {

@@ -1,4 +1,6 @@
-﻿using Smykkeskrin.Model;
+﻿using System;
+using System.Collections.Generic;
+using Smykkeskrin.Model;
 using Smykkeskrin.Repo;
 
 public class FeedService
