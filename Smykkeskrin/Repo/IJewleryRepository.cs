@@ -9,10 +9,13 @@ public interface IJewleryRepository
     
     void DeleteJewlery(Jewlery jewlery);
     
+    void UpdateJewlery(Jewlery jewlery);
+    
     Jewlery GetJewlery(string jewleryId);
     
     List<Jewlery> GetJewleries();
     
     Jewlery GetJewleryById(string jewleryId);
+    
     
 }

@@ -16,6 +16,11 @@ public class JewleryRepository : IJewleryRepository
         throw new NotImplementedException();
     }
 
+    public void UpdateJewlery(Jewlery jewlery)
+    {
+        throw new NotImplementedException();
+    }
+
     public Jewlery GetJewlery(string jewleryId)
     {
         throw new NotImplementedException();
