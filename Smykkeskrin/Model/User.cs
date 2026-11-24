@@ -23,12 +23,17 @@ public class User
         PhoneNumber = phoneNumber;
         UserRole = userRole;
     }
+
+    public User()
+    {
+        
+    }
     
     public enum Role
     {
-        Vip,
-        Admin,
-        User
+        Vip = 0,
+        Admin = 1,
+        User = 2
     }
     
 }
