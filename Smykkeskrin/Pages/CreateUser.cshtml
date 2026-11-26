@@ -3,17 +3,100 @@
 
 @{
     Layout = null;
+    ViewData["title"] = "Opret Bruger";
 }
 
 <!DOCTYPE html>
-
-<html>
+<html lang="da">
 <head>
-    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Dit Digitale Smykkeskrin</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/smykker.css" asp-append-version="true" />
+    
 </head>
 <body>
-<div>
-    
+
+<div class="container-fluid p-0">
+    <div class="row g-0">
+        
+        <div class="col-lg-5 login-left-panel d-flex flex-column justify-content-between p-5">
+            
+            <!-- Logo og Navn -->
+            <div class="text-center pt-2">
+                <img src="~/images/logo.png" alt="Dit Digitale Smykkeskrin Logo" style="width: 240px; max-width: 80%; height: auto;" />
+            </div>
+
+            <!-- Midterste formular-sektion -->
+            <div class="mx-auto w-100 my-auto py-3" style="max-width: 400px;">
+                <h1 class="mb-4 fw-normal" style="font-family: 'Georgia', serif; font-size: 2.1rem;">
+                    Opret dit skrin
+                </h1>
+
+                @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                {
+                    <div class="alert alert-danger">
+                        @Model.ErrorMessage
+                    </div>
+                }
+
+                <form method="post">
+                    <!-- Fornavn og Efternavn side om side -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="NewUser.FirstName" class="form-label mb-1">Fornavn</label>
+                            <input asp-for="NewUser.FirstName" class="form-control underline-input" />
+                            <span asp-validation-for="NewUser.FirstName" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="NewUser.LastName" class="form-label mb-1">Efternavn</label>
+                            <input asp-for="NewUser.LastName" class="form-control underline-input" />
+                            <span asp-validation-for="NewUser.LastName" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="NewUser.Username" class="form-label mb-1">Brugernavn</label>
+                        <input asp-for="NewUser.Username" class="form-control underline-input" />
+                        <span asp-validation-for="NewUser.Username" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="NewUser.Email" class="form-label mb-1">Email</label>
+                        <input asp-for="NewUser.Email" type="email" class="form-control underline-input" />
+                        <span asp-validation-for="NewUser.Email" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="NewUser.PhoneNumber" class="form-label mb-1">Telefonnummer (valgfrit)</label>
+                        <input asp-for="NewUser.PhoneNumber" type="tel" class="form-control underline-input" />
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="NewUser.Password" class="form-label mb-1">Adgangskode</label>
+                        <input asp-for="NewUser.Password" type="password" class="form-control underline-input" />
+                        <span asp-validation-for="NewUser.Password" class="text-danger small"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-taupe w-100 mb-3">Opret bruger</button>
+                    <a asp-page="/Login" class="btn btn-taupe w-100 d-block text-center text-decoration-none">Tilbage til log ind</a>
+                </form>
+            </div>
+            
+            <div></div>
+        </div>
+
+        <!-- HØJRE SIDE (60% bredde på desktop - stemningsbillede) -->
+        <div class="col-lg-7 d-none d-lg-block">
+            <img src="images/login.pic.png" 
+                 alt="Smykkeskrin med smykker" 
+                 class="login-right-image" />
+        </div>
+
+    </div>
 </div>
+
 </body>
 </html>

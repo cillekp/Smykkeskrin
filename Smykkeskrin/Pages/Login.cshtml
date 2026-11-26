@@ -13,69 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Dit Digitale Smykkeskrin</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-
-    <style>
-        body {
-            background-color: #DFD0BF;
-            color: #1C1B1A;
-            font-family: 'Georgia', serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .login-left-panel {
-            background-color: #DFD0BF;
-            min-height: 100vh;
-        }
-
-        .brand-header {
-            color: #8C7A6B;
-            font-family: sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 0.15em;
-        }
-
-        .underline-input {
-            background-color: transparent !important;
-            border: none !important;
-            border-bottom: 1.5px solid #1C1B1A !important;
-            border-radius: 0 !important;
-            padding: 8px 0 !important;
-            color: #1C1B1A !important;
-            font-family: sans-serif;
-            font-size: 1rem;
-            box-shadow: none !important;
-        }
-
-        .underline-input:focus {
-            border-bottom: 2px solid #000000 !important;
-            box-shadow: none !important;
-        }
-
-        .btn-taupe {
-            background-color: #9E8774;
-            color: #1C1B1A;
-            border: none;
-            border-radius: 14px;
-            padding: 13px 20px;
-            font-family: sans-serif;
-            font-size: 1.05rem;
-            font-weight: 400;
-            transition: background-color 0.2s ease;
-        }
-
-        .btn-taupe:hover {
-            background-color: #8A7360;
-            color: #1C1B1A;
-        }
-
-        .login-right-image {
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/smykker.css" asp-append-version="true" />
+    
 </head>
 <body>
 
@@ -91,7 +31,7 @@
 
             <!-- Midterste formular-sektion -->
             <div class="mx-auto w-100 my-auto" style="max-width: 380px;">
-                <h1 class="mb-5 fw-normal" style="font-size: 2.3rem; letter-spacing: 0.01em;">
+                <h1 class="mb-5 fw-normal" style="font-family: 'Georgia', serif; font-size: 2.3rem;">
                     Velkommen tilbage
                 </h1>
 

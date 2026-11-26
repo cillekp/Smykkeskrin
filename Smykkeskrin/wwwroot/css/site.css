@@ -98,4 +98,39 @@ body {
   color: #222222;
 }
 
+/* --- min login og opret bruger  --- */
+.underline-input {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1.5px solid #222222 !important;
+    border-radius: 0 !important;
+    padding: 8px 0 !important;
+    color: #222222 !important;
+    box-shadow: none !important;
+}
 
+.underline-input:focus {
+    border-bottom: 2px solid #000000 !important;
+    box-shadow: none !important;
+}
+
+.btn-taupe {
+    background-color: #9f856e;
+    color: #222222;
+    border: none;
+    border-radius: 14px;
+    padding: 13px 20px;
+    font-size: 1.05rem;
+}
+
+.btn-taupe:hover {
+    background-color: #8a715b;
+    color: #222222;
+}
+
+.login-right-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
