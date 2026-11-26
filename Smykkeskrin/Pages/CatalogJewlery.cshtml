@@ -21,64 +21,77 @@
 </head>
 <body>
 <div class="katalog-side">
-    <div class="row align-items-start">
-        <!-- Venstre kolonne: Hånd bliver stående ved scroll -->
-        <div class="col-md-3">
-            <div class="haand-sticky">
-                <img src="~/images/sketch.png" alt="sketch" class="img-fluid w-100" asp-append-version="true"/>
-                <p class="mt-2 mb-0 text-center">Prøv på hånd (kommer snart)</p>
+    
+    
+
+    <div class="pinterest-grid">
+    <!-- Kolonne 1 -->
+    <div class="pinterest-item smykke-kort text-center">
+        <a href="#">
+            <img src="~/images/ring1.png" alt="SOLIS SIGNET RING" asp-append-version="true" />
+            <div class="smykke-tekst mt-2">
+                <div>SOLIS SIGNET RING</div>
+                <div>18k Guld</div>
             </div>
-        </div>
-
-        <!-- Højre kolonne: Kategorimenu + 3 smykker pr. række -->
-        <div class="col-md-9">
-            <div class="d-flex justify-content-end gap-4 mb-4 kategori-menu">
-                <a href="#">Alle</a>
-                <a href="#">Ringe</a>
-                <a href="#">Halskæder</a>
-                <a href="#">Øreringe</a>
-                <a href="#">Armbånd</a>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="smykke-kort text-center">
-                        <a href="#">
-                            <img src="~/images/ring1.png" alt="SOLIS SIGNET RING" class="img-fluid w-100" asp-append-version="true"/>
-                            <div class="smykke-tekst mt-2">
-                                <div>SOLIS SIGNET RING</div>
-                                <div>18k Guld</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="smykke-kort text-center">
-                        <a href="#">
-                            <img src="~/images/ring2.png" alt="AURA RING" class="img-fluid w-100" asp-append-version="true"/>
-                            <div class="smykke-tekst mt-2">
-                                <div>AURA RING</div>
-                                <div>18k Guld</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="smykke-kort text-center">
-                        <a href="#">
-                            <img src="~/images/ring3.png" alt="LUNA MOON RING" class="img-fluid w-100" asp-append-version="true"/>
-                            <div class="smykke-tekst mt-2">
-                                <div>LUNA MOON RING</div>
-                                <div>18k Guld</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </a>
     </div>
+
+    <!-- Kolonne 2: Lille billede øverst -->
+    <div class="pinterest-item smykke-kort text-center">
+        <a href="#">
+            <img src="~/images/ring2.png" alt="AURA RING" asp-append-version="true" />
+            <div class="smykke-tekst mt-2">
+                <div>AURA RING</div>
+                <div>18k Guld</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Kolonne 3 -->
+    <div class="pinterest-item smykke-kort text-center">
+        <a href="#">
+            <img src="~/images/ring3.png" alt="LUNA MOON RING" asp-append-version="true" />
+            <div class="smykke-tekst mt-2">
+                <div>LUNA MOON RING</div>
+                <div>18k Guld</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Kolonne 4 -->
+    <div class="pinterest-item smykke-kort text-center">
+        <a href="#">
+            <img src="~/images/ring1.png" alt="SMYKKE 4" asp-append-version="true" />
+            <div class="smykke-tekst mt-2">
+                <div>SMYKKE 4</div>
+                <div>18k Guld</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Næste rækkes kort i fuld bredde af hver kolonne -->
+    <div class="pinterest-item smykke-kort text-center">
+        <a href="#">
+            <img src="~/images/ring3.png" alt="LUNA MOON RING" asp-append-version="true" />
+            <div class="smykke-tekst mt-2">
+                <div>LUNA MOON RING</div>
+                <div>18k Guld</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Langt billede under det lille -->
+    <div class="pinterest-item smykke-kort text-center">
+        <a href="#">
+            <img src="~/images/ring1.png" alt="LANGT SMYKKE" class="smykke-lang" asp-append-version="true" />
+            <div class="smykke-tekst mt-2">
+                <div>LANGT SMYKKE</div>
+                <div>18k Guld</div>
+            </div>
+        </a>
+    </div>
+</div>
+
 </div>
 </body>
 </html>
