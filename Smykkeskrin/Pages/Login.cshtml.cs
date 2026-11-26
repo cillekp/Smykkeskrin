@@ -38,7 +38,7 @@ public class Login : PageModel
         HttpContext.Session.SetString("Username", loggedInUser.Username);
         HttpContext.Session.SetString("UserRole", loggedInUser.UserRole.ToString());
 
-        return RedirectToPage("/Index");
+        return RedirectToPage("/CatalogJewlery");
     }
     
     
