@@ -2,7 +2,7 @@
 @model Smykkeskrin.Pages.CatalogJewlery
 
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
 <!DOCTYPE html>
@@ -17,47 +17,68 @@
     <link rel="stylesheet" href="~/css/smykker.css" asp-append-version="true" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
 </head>
 <body>
+<div class="katalog-side">
+    <div class="row align-items-start">
+        <!-- Venstre kolonne: Hånd bliver stående ved scroll -->
+        <div class="col-md-3">
+            <div class="haand-sticky">
+                <img src="~/images/sketch.png" alt="sketch" class="img-fluid w-100" asp-append-version="true"/>
+                <p class="mt-2 mb-0 text-center">Prøv på hånd (kommer snart)</p>
+            </div>
+        </div>
 
-<div class="container">
-    <h2>Image Gallery</h2>
-    <p>The .thumbnail class can be used to display an image gallery.</p>
-    <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
-    <p>Click on the images to enlarge them.</p>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <a href="/w3images/lights.jpg" target="_blank">
-                    <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
-                    <div class="caption">
-                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-                    </div>
-                </a>
+        <!-- Højre kolonne: Kategorimenu + 3 smykker pr. række -->
+        <div class="col-md-9">
+            <div class="d-flex justify-content-end gap-4 mb-4 kategori-menu">
+                <a href="#">Alle</a>
+                <a href="#">Ringe</a>
+                <a href="#">Halskæder</a>
+                <a href="#">Øreringe</a>
+                <a href="#">Armbånd</a>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <a href="/w3images/nature.jpg" target="_blank">
-                    <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
-                    <div class="caption">
-                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="smykke-kort text-center">
+                        <a href="#">
+                            <img src="~/images/ring1.png" alt="SOLIS SIGNET RING" class="img-fluid w-100" asp-append-version="true"/>
+                            <div class="smykke-tekst mt-2">
+                                <div>SOLIS SIGNET RING</div>
+                                <div>18k Guld</div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <a href="/w3images/fjords.jpg" target="_blank">
-                    <img src="/w3images/fjords.jpg" alt="Fjords" style="width:100%">
-                    <div class="caption">
-                        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="smykke-kort text-center">
+                        <a href="#">
+                            <img src="~/images/ring2.png" alt="AURA RING" class="img-fluid w-100" asp-append-version="true"/>
+                            <div class="smykke-tekst mt-2">
+                                <div>AURA RING</div>
+                                <div>18k Guld</div>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="smykke-kort text-center">
+                        <a href="#">
+                            <img src="~/images/ring3.png" alt="LUNA MOON RING" class="img-fluid w-100" asp-append-version="true"/>
+                            <div class="smykke-tekst mt-2">
+                                <div>LUNA MOON RING</div>
+                                <div>18k Guld</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 </body>
 </html>
