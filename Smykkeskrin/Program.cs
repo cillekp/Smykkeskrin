@@ -1,8 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Smykkeskrin.Repo;
+using Smykkeskrin.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Registrer dine repositories og services i DI-containeren
+builder.Services.AddTransient<IFeedRepository, FeedRepository>();
+builder.Services.AddTransient<FeedService>();
+
+// (Husk også denne, hvis du bruger UserRepository i din service)
+builder.Services.AddTransient<IUserRepository, UserRepository>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();

@@ -1,4 +1,6 @@
-namespace Smykkeskrin.Pages;
+namespace Smykkeskrin.Pages; //namespace Smykkeskrin.model;??
+
+using Smykkeskrin.model;
 
 public class Jewlery
 {

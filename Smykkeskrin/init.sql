@@ -32,5 +32,10 @@ VALUES
     ('Freja', 'Lindqvist', 'freja_design', 'Vip1234!', 'freja@guldsmed.dk', '22334455', 0),
     ('Kasper', 'Vestergaard', 'kasper_guld', 'Vip1234!', 'kasper@smykkekunst.dk', '33445566', 0),
     ('Sofie', 'Hansen', 'sofie_h', 'Bruger1234!', 'sofie@mail.dk', '44556677', 2),
-    ('Emma', 'Nielsen', 'emma_n', 'Bruger1234!', 'emma@mail.dk', NULL, 2);
+    ('Emma', 'Nielsen', 'emma_n', 'Bruger1234!', 'emma@mail.dk', NULL, 2),
+    ('Oliver', 'Møller', 'oliver_style', 'HypeKing99#', 'oliver@mollerstyle.dk', '30987654', 0),
+    ('Iben', 'Vang', 'vang_guld', 'GoldSmith2026$', 'iben@vangguld.dk', '40112233', 0),
+    ('Cecilie', 'Holm', 'holm_jewels', 'CecilieHolm*88', 'cecilie@holmjewels.dk', '50667788', 0),
+    ('Clara', 'Jensen', 'clara_sparkle', 'SparkleClara!1', 'clara@clarajensen.dk', '60554433', 0),
+    ('Hannah', 'Bruun', 'bruun_haandvaerk', 'HannahBruun#2', 'hannah@bruunguld.dk', '70889900', 0);
 GO

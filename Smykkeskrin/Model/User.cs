@@ -1,4 +1,5 @@
 namespace Smykkeskrin.model;
+using Smykkeskrin.model;
 
 public class User
 {

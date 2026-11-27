@@ -1,4 +1,5 @@
 using Smykkeskrin.Pages;
+using Smykkeskrin.model;
 using Smykkeskrin.Repo;
 using System.Collections.Generic;
 
