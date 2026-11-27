@@ -1,6 +1,4 @@
-namespace Smykkeskrin.Pages; //namespace Smykkeskrin.model;??
-
-using Smykkeskrin.model;
+namespace Smykkeskrin.Model;
 
 public class Jewlery
 {
@@ -10,14 +8,15 @@ public class Jewlery
     public string Brand { get; set; }
     public double Price { get; set; }
     public bool IsActive { get; set; }
-    public string PictureSti { get; set; }
+
+    public string ImgPth { get; set; }
     public JewleryType Type { get; set; }
 
 
 
 
     public Jewlery(int jewleryid, string name, string material, string brand, double price, bool isActive,
-        string pictureSti, JewleryType type)
+        string imgPth, JewleryType type)
     {
         Jewleryid = jewleryid;
         Name = name;
@@ -25,13 +24,18 @@ public class Jewlery
         Brand = brand;
         Price = price;
         IsActive = isActive;
-        PictureSti = pictureSti;
+        ImgPth = imgPth;
         Type = type;
     }
 
-  
-  
-    public enum JewleryType 
+    public Jewlery()
+    {
+        
+    }
+
+
+
+public enum JewleryType 
     {                       
         earring,        
         bracelet,       

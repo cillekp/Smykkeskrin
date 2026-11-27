@@ -12,86 +12,45 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/smykker.css" asp-append-version="true" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
 </head>
-<body>
-<div class="katalog-side">
-    
-    
 
-    <div class="pinterest-grid">
-    <!-- Kolonne 1 -->
-    <div class="pinterest-item smykke-kort text-center">
-        <a href="#">
-            <img src="~/images/ring1.png" alt="SOLIS SIGNET RING" asp-append-version="true" />
-            <div class="smykke-tekst mt-2">
-                <div>SOLIS SIGNET RING</div>
-                <div>18k Guld</div>
-            </div>
-        </a>
-    </div>
 
-    <!-- Kolonne 2: Lille billede øverst -->
-    <div class="pinterest-item smykke-kort text-center">
-        <a href="#">
-            <img src="~/images/ring2.png" alt="AURA RING" asp-append-version="true" />
-            <div class="smykke-tekst mt-2">
-                <div>AURA RING</div>
-                <div>18k Guld</div>
-            </div>
-        </a>
-    </div>
 
-    <!-- Kolonne 3 -->
-    <div class="pinterest-item smykke-kort text-center">
-        <a href="#">
-            <img src="~/images/ring3.png" alt="LUNA MOON RING" asp-append-version="true" />
-            <div class="smykke-tekst mt-2">
-                <div>LUNA MOON RING</div>
-                <div>18k Guld</div>
-            </div>
-        </a>
-    </div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+    @foreach (var jewlery in Model.Jewleries) 
+    {
+        <div class="col">
+            <div class="card h-100 rounded-0 border-0 p-3" style="background-color: #9f856e !important;">
 
-    <!-- Kolonne 4 -->
-    <div class="pinterest-item smykke-kort text-center">
-        <a href="#">
-            <img src="~/images/ring1.png" alt="SMYKKE 4" asp-append-version="true" />
-            <div class="smykke-tekst mt-2">
-                <div>SMYKKE 4</div>
-                <div>18k Guld</div>
-            </div>
-        </a>
-    </div>
+                <!-- Billede i toppen af kortet -->
+                <img src="@jewlery.ImgPth" class="card-img-top rounded-0" alt="@jewlery.Name" style="aspect-ratio: 1/1; object-fit: cover;" />
 
-    <!-- Næste rækkes kort i fuld bredde af hver kolonne -->
-    <div class="pinterest-item smykke-kort text-center">
-        <a href="#">
-            <img src="~/images/ring3.png" alt="LUNA MOON RING" asp-append-version="true" />
-            <div class="smykke-tekst mt-2">
-                <div>LUNA MOON RING</div>
-                <div>18k Guld</div>
-            </div>
-        </a>
-    </div>
+                <!-- Tekst i midten -->
+                <div class="card-body text-center px-0 pt-3 pb-2">
+                    <h6 class="card-title text-uppercase small fw-semibold mb-1" style="letter-spacing: 0.05em;">@jewlery.Name</h6>
+                    <p class="card-text small mb-0" style="font-size: 0.8rem; opacity: 0.85;">@jewlery.Brand · @jewlery.Material</p>
+                </div>
 
-    <!-- Langt billede under det lille -->
-    <div class="pinterest-item smykke-kort text-center">
-        <a href="#">
-            <img src="~/images/ring1.png" alt="LANGT SMYKKE" class="smykke-lang" asp-append-version="true" />
-            <div class="smykke-tekst mt-2">
-                <div>LANGT SMYKKE</div>
-                <div>18k Guld</div>
+                <!-- Knap i bunden (card-footer) -->
+                <div class="card-footer bg-transparent border-0 p-0 pt-2">
+                    <form method="post" asp-page-handler="AddToSkrin">
+                        <input type="hidden" name="jewleryId" value="@jewlery.Jewleryid" />
+                        <button type="submit" class="btn btn-add-skrin w-100">
+                            TILFØJ TIL SKRIN
+                        </button>
+                    </form>
+                </div>
+
             </div>
-        </a>
-    </div>
+        </div>
+                
+       
+                    
+    }
 </div>
-
-</div>
-</body>
-</html>
+  

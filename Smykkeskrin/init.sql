@@ -15,7 +15,7 @@ CREATE TABLE Jewlery (
                          Brand NVARCHAR(100) NOT NULL,
                          Price FLOAT NOT NULL,          
                          IsActive BIT NOT NULL DEFAULT 1, -- Matcher C# bool (1 = true, 0 = false)
-                         PictureSti NVARCHAR(255), 
+                         ImgPth NVARCHAR(255), 
                          Type INT NOT NULL                
 );
 GO
@@ -32,10 +32,19 @@ VALUES
     ('Freja', 'Lindqvist', 'freja_design', 'Vip1234!', 'freja@guldsmed.dk', '22334455', 0),
     ('Kasper', 'Vestergaard', 'kasper_guld', 'Vip1234!', 'kasper@smykkekunst.dk', '33445566', 0),
     ('Sofie', 'Hansen', 'sofie_h', 'Bruger1234!', 'sofie@mail.dk', '44556677', 2),
-    ('Emma', 'Nielsen', 'emma_n', 'Bruger1234!', 'emma@mail.dk', NULL, 2),
-    ('Oliver', 'Møller', 'oliver_style', 'HypeKing99#', 'oliver@mollerstyle.dk', '30987654', 0),
-    ('Iben', 'Vang', 'vang_guld', 'GoldSmith2026$', 'iben@vangguld.dk', '40112233', 0),
-    ('Cecilie', 'Holm', 'holm_jewels', 'CecilieHolm*88', 'cecilie@holmjewels.dk', '50667788', 0),
-    ('Clara', 'Jensen', 'clara_sparkle', 'SparkleClara!1', 'clara@clarajensen.dk', '60554433', 0),
-    ('Hannah', 'Bruun', 'bruun_haandvaerk', 'HannahBruun#2', 'hannah@bruunguld.dk', '70889900', 0);
+    ('Emma', 'Nielsen', 'emma_n', 'Bruger1234!', 'emma@mail.dk', NULL, 2);
+
+GO
+
+INSERT INTO Jewlery ( Name, Material, Brand, Price, IsActive, ImgPth, Type)
+VALUES
+    (N'Glat Guld Ring', N'Guld', N'Nordic Atelier', 1299.00, 1, N'/images/ring1.png', 1),
+    (N'Snoet Guld Ring', N'Guld', N'Nordic Atelier', 999.00, 1, N'/images/ring2.png', 1),
+    (N'Klassisk Sølv Ring', N'Sølv', N'Kyst & Form', 749.00, 1, N'/images/ring3.png', 1),
+    (N'Hamret Bred Sølv Ring', N'Sølv', N'Kyst & Form', 1149.00, 1, N'/images/ring4.png', 1),
+    (N'Minimalistisk Ring med Sten', N'Guld', N'Lumen Jewelry', 1499.00, 1, N'/images/ring5.png', 1),
+    (N'Børstet Sølv Ring', N'Sølv', N'Kyst & Form', 849.00, 1, N'/images/ring6.png', 1),
+    (N'Tynd Guld Ring', N'Guld', N'Nordic Atelier', 699.00, 1, N'/images/ring7.png', 1),
+    (N'Signetring i Sølv', N'Sølv', N'Lumen Jewelry', 1399.00, 1, N'/images/ring8.png', 1);
+
 GO

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-using Smykkeskrin.Pages;
+using Smykkeskrin.Model;
+using Smykkeskrin.Repo;
 
 namespace Smykkeskrin.Repo;
 
