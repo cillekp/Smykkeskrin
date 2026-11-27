@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Microsoft.Data.SqlClient;
 using Smykkeskrin.model;
 
@@ -29,7 +28,14 @@ public class UserRepository : IUserRepository
                command.Parameters.AddWithValue("@userName", user.Username);
                command.Parameters.AddWithValue("@password", user.Password);
                command.Parameters.AddWithValue("@email", user.Email);
-               command.Parameters.AddWithValue("@phoneNumber", user.PhoneNumber);
+               if (string.IsNullOrEmpty(user.PhoneNumber))
+               {
+                   command.Parameters.AddWithValue("@phoneNumber", DBNull.Value);
+               }
+               else
+               {
+                   command.Parameters.AddWithValue("@phoneNumber", user.PhoneNumber);
+               }
                command.Parameters.AddWithValue("@userRole", (int)user.UserRole);
                
                connection.Open();
